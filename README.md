@@ -18,8 +18,8 @@ Este projeto tem como objetivo capacitar a comunidade de Sítio Novo do Tocantin
 ## Tecnologias Utilizadas
 
 - HTML/CSS para tutoriais interativos
-- JavaScript (se houver alguma aplicação web)
-- Frameworks de segurança digital (se aplicável)
+- JavaScript
+- Frameworks como bootstrap
 
 ## Licença
 
