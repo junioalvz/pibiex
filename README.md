@@ -19,7 +19,7 @@ Este projeto tem como objetivo capacitar a comunidade de Sítio Novo do Tocantin
 
 - HTML/CSS para tutoriais interativos
 - JavaScript
-- Frameworks como bootstrap
+- Frameworks, como bootstrap
 
 ## Licença
 

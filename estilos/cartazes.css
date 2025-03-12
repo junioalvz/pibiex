@@ -20,6 +20,19 @@
     background-color: #F2A922;
 }
 
+/* navbar */
+.navbar {
+    width: 100%;
+    background-color: #F2A922;
+    padding: 1rem 2rem;
+}
+
+.navbar .container-fluid {
+    max-width: 1536px;
+    margin: 0 auto;
+}
+
+
 /* Cards dos cartazes */
 .card {
     transition: all 0.3s ease;
