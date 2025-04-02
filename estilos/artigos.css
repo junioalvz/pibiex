@@ -24,7 +24,24 @@
 
 }
 
-/* 🔹 Rodapé */
+.figure-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+/*  Rodapé */
 footer {
     display: flex;
     align-items: center;
