@@ -1,4 +1,9 @@
 /* Estilos para a página de cartazes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Título principal */
 .container h1 {
@@ -31,6 +36,7 @@
     max-width: 1536px;
     margin: 0 auto;
 }
+
 
 
 /* Cards dos cartazes */

@@ -6,6 +6,7 @@
 }
 
 body {
+    padding-top: 70px;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5; 
 }
@@ -34,16 +35,26 @@ body {
 
 /* 🔹 Hero (banner de fundo ocupando 100%) */
 .hero {
-    width: 100%;
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.hero img {
+.hero-image {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
+
+/* Ajustes específicos para mobile */
+@media (max-width: 767px) {
+    .hero-image {
+        min-height: 300px;  /* Garante altura mínima */
+    }
+    
+}
 /* 🔹 Seção de Artigos */
 .artigo {
     text-align: center;
@@ -51,18 +62,20 @@ body {
     margin-bottom: 20px;
 }
 
+/* Seção de Artigos - Versão Responsiva */
 .container {
     display: flex;
-    justify-content: center; /* Centraliza os cards */
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     padding-bottom: 50px;
 }
 
 .image-box {
-    width: 500px;
+    width: 90%;
+    max-width: 400px;
     height: auto;
-    background-color: #fff;
+    background-color: #ebebeb;
     border-radius: 16px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -70,6 +83,35 @@ body {
     align-items: center;
     padding: 20px;
     gap: 15px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .image-box {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Opcional: ajuste o padding para mobile */
+    .image-box {
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .image-box {
+        width: 95%;
+        max-width: 400px; /* ou o valor que preferir */
+    }
 }
 
 .image-box img {
@@ -100,63 +142,86 @@ body {
     width: 120px;
     height: 50px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #F2A922;
     color: white;
     border: none;
     border-radius: 16px;
     cursor: pointer;
     font-size: 16px;
     transition: background 0.3s;
+    text-decoration: none;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #392100;
     transform: scale(1.05);
 }
 
 .vermais {
     display: block;
     margin: 30px auto;
+    text-align: center;
     width: 120px;
-    height: 40px;
+    height: 50px;
 }
 
 /* 🔹 Seção de Proteção Online */
 .fundo-completo {
     width: 100%; /* Fundo ocupando toda a tela */
-    background-color: #d5d5d5;
+    background-color: #ebebeb;
     padding: 60px 0;
 }
 
-.protecao-online {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    width: 80%;
+.fundo-completo {
+    background-color: #ebebeb;
+    padding: 2rem;
+  }
+  
+  .protecao-online {
+    max-width: 1536px;
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-caixa {
-    width: 500px;
-    height: 400px;
-    background-color: #9b9b9b;
-    border-radius: 16px;
+    text-align: center;
+  }
+  
+  .titulo-dicas {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+  }
+  
+  .carrossel-dicas {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .item-dica {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imagem-circular {
+    width: 100px;
+    height: 100px;
     overflow: hidden;
-}
-
-.image-caixa img {
+    margin-bottom: 1rem;
+  }
+  
+  .imagem-circular img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+  }
+  
+  .item-dica p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
 
-/* seção de dicas: */
-
+/* 🔹 Seção de dicas - Versão Responsiva */
 .protecao-online2 {
     padding: 40px 20px;
 }
@@ -171,7 +236,7 @@ button:hover {
 }
 
 .image-box-ciber {
-    flex: 0 0 400px; /* Mantém a largura fixa */
+    flex: 0 0 400px;
     height: 500px;
     background-color: #333;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -179,36 +244,38 @@ button:hover {
     overflow: hidden;
 }
 
-.image-box-ciber img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .texto-container {
     flex: 1;
     max-width: 600px;
 }
 
-.titulo-secao h2 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #333;
+/* Versão Mobile */
+@media (max-width: 767px) {
+    .protecao-online2 .conteudo {
+        flex-direction: column; /* Empilha os elementos */
+        align-items: center; /* Centraliza horizontalmente */
+        gap: 30px; /* Espaço entre imagem e texto */
+    }
+    
+    .image-box-ciber {
+        flex: 1 1 auto; /* Permite que redimensione */
+        width: 100%;
+        max-width: 100%;
+        height: 300px; /* Altura reduzida para mobile */
+    }
+    
+    .texto-container {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
-.dados {
-    margin-bottom: 30px;
-}
-
-.dados p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.fonte {
-    font-size: 14px;
-    font-style: italic;
-    color: #666;
+/* Ajustes para tablets (opcional) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .image-box-ciber {
+        flex: 0 0 300px;
+        height: 400px;
+    }
 }
 
 /* 🔹 Rodapé */

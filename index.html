@@ -11,9 +11,9 @@
 
     <!--navbar-->
 
-    <nav style="background-color:#F2A922;" class="navbar navbar-expand-lg ">
+    <nav style="background-color:#F2A922;" class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html"><img src="/components/images/INTERNET SEGURA (2) (1).png" alt=""></a>
+        <a class="navbar-brand" href="/index.html"><img src="/components/images/logo63h.svg" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,8 +39,24 @@
     <!--imagem do banner-->
 
     <section class="hero">
-        <img src="/components/images/./assets/banner_internet_segura.jpg" alt="Descrição da imagem"> 
-    </section>
+      <picture>
+          <!-- Desktop (telas maiores que 768px) -->
+          <source 
+              media="(min-width: 768px)" 
+              srcset="/components/images/assets/banner_internet_segura.jpg"
+          >
+          <!-- Mobile (telas menores) -->
+          <img 
+              src="/components/images/assets/herobannermobile600.jpg" 
+              alt="Banner principal do site" 
+              loading="eager" 
+              width="600" 
+              height="400" 
+              class="hero-image"
+          >
+      </picture>
+
+  </section>
 
        <h2 class="artigo">Veja alguns artigos</h2>
        <div class="container">
@@ -67,7 +83,7 @@
         <!-- Artigo 3 - LBCA -->
         <div class="image-box">
           <img src="https://www.lbca.com.br/wp-content/uploads/2025/02/Site-1.png" alt="Conscientização digital para uma internet segura">
-          <h3><strong style="font-size: 1.2em;">Conscientização Digital</strong></h3>
+          <h3><strong style="font-size: 1.2em;">Conscientização na era Digital</strong></h3>
           <p>Um passo essencial para promover uma internet segura para todos os usuários.</p>
           <a href="https://www.lbca.com.br/conscientizacao-digital-e-passo-inicial-para-a-internet-segura/?utm_source=chatgpt.com" target="_blank">
             <button class="b1">Saiba mais</button>
@@ -76,30 +92,56 @@
 
        </div>
        <div>
-        <a href="artigos.html">
+        <a style="text-decoration: none;" href="artigos.html">
           <button class="vermais">Ver todos</button>
         </a>
 
 
   <!--terceira seção do site -->
 
-    <div class="fundo-completo">
+  <div class="fundo-completo">
     <section class="protecao-online">
+      <h2 class="titulo-dicas"> Como se proteger online:</h2>
 
-      <div class="image-caixa">
-        <!-- imagem aqui -->
-        <img src="caminho/para/sua-imagem.jpg" alt="Proteção Online">
+        <p style="font-weight: 400; padding-top: auto;">Aqui vão algumas dicas rápidas para que você navegue com segurança</p>
+      
+        <div class="carrossel-dicas">
+        <!-- Item 1 -->
+        <div class="item-dica">
+          <div class="imagem-circular">
+            <img src="https://img.icons8.com/?size=100&id=8OdwzXFjBVH2&format=png&color=000000" alt="Senha forte">
+          </div>
+          <p>Criar senhas fortes</p>
+        </div>
+  
+        <!-- Item 2 -->
+        <div class="item-dica">
+          <div class="imagem-circular">
+            <img src="https://img.icons8.com/?size=100&id=xPX4qmtKvtBp&format=png&color=000000" alt="Link suspeito">
+          </div>
+          <p>Não clicar em links suspeitos</p>
+        </div>
+  
+        <!-- Item 3 -->
+        <div class="item-dica">
+          <div class="imagem-circular">
+            <img src="https://img.icons8.com/?size=100&id=5WJ8Ormzze2Z&format=png&color=000000" alt="Wi-Fi público">
+          </div>
+          <p>Evitar Wi-Fi público</p>
+        </div>
+  
+        <!-- Item 4 -->
+        <div class="item-dica">
+          <div class="imagem-circular">
+            <img src="https://img.icons8.com/?size=100&id=iqeQVE4k9kKR&format=png&color=000000" alt="Autenticação 2FA">
+          </div>
+          <p>Ativar autenticação em dois fatores</p>
+        </div>
       </div>
-      <div class="conteudo">
-        <h2>🛡️ Como se Proteger Online</h2>
-        <ol>
-            <li>Criar senhas fortes</li>
-            <li>Não clicar em links suspeitos</li>
-            <li>Evitar Wi-Fi público</li>
-            <li>Ativar autenticação em dois fatores</li>
-        </ol>
-      </div>
-    </div>
+    </section>
+  </div>
+  
+
 
     </section>
 
@@ -135,5 +177,6 @@
     <footer>
       <p> &copy; Universidade Estadual do Tocantins - UNITINS. Todos os direitos reservados </p>
     </footer>
+<script src="/estilos/scripts/script.js"></script>   
 </body>
 </html>
